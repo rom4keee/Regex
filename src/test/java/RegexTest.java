@@ -8,15 +8,15 @@ class RegexTests {
     String creditCardNumber = "5149612222222229";
 
     @Test
-    void verifyEmailAddressPatternMatchesRegex() {
+    void verifyEmailAddress() {
         assertTrue(StringMathcer.stringRegexMatcher(emailAddress, StringMathcer.Email));
     }
     @Test
-    void verifyIpPatternMatchesRegex() {
+    void verifyIP() {
         assertTrue(StringMathcer.stringRegexMatcher(ipAddress, StringMathcer.IP));
     }
     @Test
-    void verifyCreditCardPatternMatchesRegex() {
+    void verifyCreditCard() {
         assertTrue(StringMathcer.stringRegexMatcher(creditCardNumber, StringMathcer.Credit_Card));
     }
 }

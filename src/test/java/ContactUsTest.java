@@ -10,34 +10,34 @@ class ContactUsTest extends BasicTest{
     Map<String, String> epamAddress = ContactUs.getAddress();
 
     @Test
-    void verifyAddressMatchesRegex() {
+    void verifyAddressStringMatcher() {
         ContactUs.getAddress();
         assertTrue(ContactUs
                 .getAddressString()
                 .matches(ContactUs.ADDRESS));
     }
     @Test
-    void verifyStreetMatchesGivenValue() {
+    void verifyStreet() {
         assertEquals("41 University Drive", epamAddress.get("Street:"));
     }
     @Test
-    void verifyApartmentMatchesGivenValue() {
+    void verifyApartment() {
         assertEquals("Suite 202", epamAddress.get("Apartment:"));
     }
     @Test
-    void verifyCityMatchesGivenValue() {
+    void verifyCity() {
         assertEquals("Newtown", epamAddress.get("City:"));
     }
     @Test
-    void verifyStateMatchesGivenValue() {
+    void verifyState() {
         assertEquals("PA", epamAddress.get("State:"));
     }
     @Test
-    void verifyPostalCodeMatchesGivenValue() {
+    void verifyPostalCode() {
         assertEquals("18940", epamAddress.get("Postal Code:"));
     }
     @Test
-    void verifyCountryMatchesGivenValue() {
+    void verifyCountry() {
         assertEquals("USA", epamAddress.get("Country:"));
     }
 }
